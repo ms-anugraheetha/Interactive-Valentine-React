@@ -1,0 +1,444 @@
+html, body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: white;
+  text-align: center;
+}
+
+/* VALENTINE CARD */
+.valentine-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.valentine-card {
+  background: linear-gradient(180deg, #ffb3c6, #ffc8dd);
+  padding: 30px 25px 40px;
+  border-radius: 30px;
+  width: 320px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.valentine-title {
+  font-size: 22px;
+  margin-bottom: 25px;
+  color: hsl(349, 100%, 70%);
+}
+
+/* PHOTO */
+.photo-pill {
+  background: rgba(255,255,255,0.4);
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.photo-pill img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.photo-label {
+  font-size: 14px;
+  margin: 10px 0 25px;
+}
+
+/* BUTTON */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button.big {
+ 
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255,77,109,0.4);
+  transition: transform 0.2s;
+}
+
+button.big:hover {
+  transform: scale(1.05);
+}
+
+/* AFTER YES */
+.yes-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: hsl(349, 100%, 70%);
+}
+
+/* CONFETTI */
+.confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.confetti-heart {
+  position: absolute;
+  top: -20px;
+  font-size: 24px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* FINAL SURPRISE */
+.final-surprise {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: hsl(349, 100%, 70%);
+}
+
+.heart {
+  font-size: 80px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.choice-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  box-shadow: 0 10px 20px rgba(255, 77, 109, 0.4);
+  transition: transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  transform: scale(1.05);
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.note-card {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.note-card:hover {
+  transform: scale(1.05);
+}
+
+.note-card.open {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.note-card span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.surprise-step {
+  font-size: 18px;
+  margin: 30px 0;
+  animation: fadeIn 0.5s ease;
+}
+
+html, body {
+  height: auto;
+  overflow-y: auto;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+/* Love Notes text color fix */
+.note-card p {
+  color: #000;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.note-card span {
+  color: #333;
+}
+
+.note-card {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* SURPRISE BUTTON MAGIC */
+.surprise-btn {
+  margin-top: 20px;
+  padding: 14px 26px;
+  font-size: 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(255, 77, 109, 0.4);
+  animation: breathe 2.5s ease-in-out infinite;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.surprise-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 18px 35px rgba(255, 77, 109, 0.6);
+}
+
+.surprise-btn:active {
+  transform: scale(0.95);
+}
+
+/* breathing animation */
+@keyframes breathe {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ENVELOPE NOTES */
+.note-envelope {
+  position: relative;
+  height: 120px;
+  background: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.note-envelope:hover {
+  transform: scale(1.05);
+}
+
+/* FLAP */
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #ffd6e0;
+  clip-path: polygon(0 0, 100% 0, 50% 70%);
+  transition: transform 0.4s ease;
+  transform-origin: top;
+}
+
+/* BODY */
+.envelope-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+}
+
+/* CLOSED TEXT */
+.tap-text {
+  color: #555;
+  font-size: 14px;
+  left: 1px;
+  top:75px;
+  font-weight: bold;
+}
+
+/* OPEN STATE */
+.note-envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.note-text {
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+  animation: fadeIn 0.4s ease;
+}
+/* GRID */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* ENVELOPE CONTAINER */
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: 6px;
+  
+}
+
+/* BACK */
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+/* FLAP */
+.envelope-flap {
+  position: absolute;
+  top: 0.%;
+  left: 0;
+  border-radius: 6px;
+  width: 100%;
+  height: 55%;
+  background: #ffd6e0;
+  clip-path: polygon(0 0, 100% 0, 50% 75%);
+  transform-origin: top;
+  transition: transform 0.5s ease, z-index 0.2s ease;
+  z-index: 4; /* default: above paper */
+}
+
+
+/* SIDE FOLDS */
+.envelope-left,
+.envelope-right {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 65%;
+  background: #ffe3eb;
+  z-index: 2;
+  border-radius: 6px;
+}
+
+.envelope-left {
+  left: 0;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.envelope-right {
+  right: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+/* LETTER */
+.letter {
+  position: absolute;
+  top: -87%;
+  width: 88%;
+  height: 75%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(100%);
+  transition: transform 0.6s ease;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.letter p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #000;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+/* TAP TEXT */
+.tap-text {
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  z-index: 5;
+}
+
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 2;
+ 
+}
+
+.envelope-flap {
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+}
+
+
+
+.letter {
+  z-index: 3;
+}
+
+.envelope.open .letter {
+  transform: translateY(-8%);
+}
+
+.envelope.open .letter p {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.envelope-back::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  border-radius: 6px;
+  z-index: 0;
+}
+
+/* Valentine card fade-out on Next */
+.valentine-card.fade-out {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.98);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
